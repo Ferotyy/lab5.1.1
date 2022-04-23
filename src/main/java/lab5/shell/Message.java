@@ -44,6 +44,7 @@ public class Message {
         hashtable1.put("spaceMarineForm_invalidMeleeWeaponType","Неверное значение MeleeWeapon\n");
         hashtable1.put("availableCommand","Недоступная команда. \n Введите \"help\" для справки.\n");
         hashtable1.put("incorrectScriptFileName","Некорректное имя файла");
+        hashtable1.put("recursion","При выполнении скрипта возникает рекурсия");
         hashtable = hashtable1;
     }
 

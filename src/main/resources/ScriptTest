@@ -12,6 +12,11 @@ LIGHTING_CLAW
 gg
 hh
 
+show
+info
+
+execute_script /Users/artemiy/IdeaProjects/lab5.1.1/src/main/resources/ScriptTest
 
 info
+show
 exit
