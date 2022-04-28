@@ -15,10 +15,11 @@ public class InsertCommand extends CommandAbstract {
 
     @Override
     public void execute() {
+        String key = getMatchGroup(1);
         SpaceMarineForm spaceMarineForm = new SpaceMarineForm(shell);
         SpaceMarine spaceMarine;
         spaceMarine = spaceMarineForm.getSpaceMarine();
-        smCollection.put(String.valueOf(spaceMarine.getId()),spaceMarine);
+        smCollection.put(key,spaceMarine);
     }
 
 }

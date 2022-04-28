@@ -1,12 +1,12 @@
 <spaceMarines>
-	<spacemarine  name = "uuu" id = "5" x = "8.0" y = "2.0" creationdate = "2022-04-23T01:35:24.502" health = "112.1" heartcount = "3" weapon = "PLASMA_GUN" meeleweapon = "CHAIN_SWORD" chapter = "defence"
+	<spacemarine key="1" name = "uuu" id = "5" x = "8.0" y = "2.0" creationdate = "2022-04-23T01:35:24.502" health = "112.1" heartcount = "3" weapon = "PLASMA_GUN" meeleweapon = "CHAIN_SWORD" chapter = "defence"
  parentLegion = "BBB"/>
-	<spacemarine  name = "sss" id = "4" x = "5.0" y = "1.0" creationdate = "2022-04-23T01:35:24.502" health = "115.1" heartcount = "1" weapon = "PLASMA_GUN" meeleweapon = "CHAIN_SWORD" chapter = "dada"
+	<spacemarine key ="2" name = "sss" id = "4" x = "5.0" y = "1.0" creationdate = "2022-04-23T01:35:24.502" health = "115.1" heartcount = "1" weapon = "PLASMA_GUN" meeleweapon = "CHAIN_SWORD" chapter = "dada"
  parentLegion = "AAA"/>
-	<spacemarine  name = "drug" id = "3" x = "2.0" y = "1.54" creationdate = "2022-04-23T01:35:24.501" health = "1.0" heartcount = "2" weapon = "PLASMA_GUN" meeleweapon = "POWER_BLADE" chapter = "s"
+	<spacemarine key = "3" name = "drug" id = "3" x = "2.0" y = "1.54" creationdate = "2022-04-23T01:35:24.501" health = "1.0" heartcount = "2" weapon = "PLASMA_GUN" meeleweapon = "POWER_BLADE" chapter = "s"
  parentLegion = "23"/>
-	<spacemarine  name = "pipu" id = "2" x = "9.0" y = "1.0" creationdate = "2022-04-23T01:35:24.501" health = "115.1" heartcount = "1" weapon = "PLASMA_GUN" meeleweapon = "CHAIN_SWORD" chapter = "hihi"
+	<spacemarine key = "4" name = "pipu" id = "2" x = "9.0" y = "1.0" creationdate = "2022-04-23T01:35:24.501" health = "115.1" heartcount = "1" weapon = "PLASMA_GUN" meeleweapon = "CHAIN_SWORD" chapter = "hihi"
  parentLegion = "AAA"/>
-	<spacemarine  name = "huh" id = "1" x = "1.0" y = "2.0" creationdate = "2022-04-23T01:35:24.501" health = "2.0" heartcount = "2" weapon = "BOLTGUN" meeleweapon = "POWER_BLADE" chapter = "ff"
+	<spacemarine key="5" name = "huh" id = "1" x = "1.0" y = "2.0" creationdate = "2022-04-23T01:35:24.501" health = "2.0" heartcount = "2" weapon = "BOLTGUN" meeleweapon = "POWER_BLADE" chapter = "ff"
  parentLegion = "gg"/>
 </spaceMarines>

@@ -16,7 +16,7 @@ public class ShowCommand extends CommandAbstract {
             System.out.println("Коллекция пуста");
         } else{
             for (String key : smCollection.keySet()){
-                System.out.println(smCollection.getSpaceMarine(key));
+                System.out.println(smCollection.getSpaceMarine(key).toString(key));
             }
         }
     }

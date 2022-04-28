@@ -4,6 +4,7 @@ import lab5.shell.CommandAbstract;
 import lab5.shell.Shell;
 import lab5.structures.SMCollection;
 
+
 public class RemoveKeyCommand extends CommandAbstract {
     public RemoveKeyCommand(Shell shell, SMCollection smCollection) {
         super(shell, smCollection);
@@ -12,7 +13,9 @@ public class RemoveKeyCommand extends CommandAbstract {
     @Override
     public void execute() {
         String key = getMatchGroup(1);
+
         smCollection.remove(key);
+
     }
 
     @Override

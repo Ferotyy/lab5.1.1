@@ -12,7 +12,6 @@ import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -132,7 +131,7 @@ public class SMCollection {
             Coordinates coordinates = spaceMarine.getCoordinates();
             LocalDateTime creationDate = spaceMarine.getCreationDate();
 
-            fileWriter.write("\t<spacemarine  name = \"" + spaceMarine.getName() + "\" id = \"" + spaceMarine.getId() +
+            fileWriter.write("\t<spacemarine key =\"" + s +"\" name = \"" + spaceMarine.getName() + "\" id = \"" + spaceMarine.getId() +
                     "\" x = \"" + coordinates.getX() + "\" y = \"" + coordinates.getY() + "\" creationdate = \"" +
                     creationDate.toString() + "\" health = \"" + spaceMarine.getHealth() + "\" heartcount = \"" +
                     spaceMarine.getHeartCount() + "\" weapon = \"" + spaceMarine.getWeapon().toString() +
@@ -175,6 +174,7 @@ public class SMCollection {
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
                     // get marine's attribute
+                    String key = element.getAttribute("key");
                     String name = element.getAttribute("name");
                     String x = element.getAttribute("x");
                     String y = element.getAttribute("y");
@@ -191,7 +191,7 @@ public class SMCollection {
                      spaceMarine.initialize();
 
                     if(spaceMarine.isValid()){
-                        spaceMarines1.put(String.valueOf(spaceMarine.getId()),spaceMarine);
+                        spaceMarines1.put(key,spaceMarine);
 
                     } else {
                         throw  new ParsingError("Загружены неверные или поврежденные данные");
@@ -200,8 +200,7 @@ public class SMCollection {
                 }
             }
 
-        } catch (ParserConfigurationException | IOException | org.xml.sax.SAXException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
         }
 
         return spaceMarines1;

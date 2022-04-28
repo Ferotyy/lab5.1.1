@@ -316,10 +316,25 @@ public class SpaceMarine {
         }
     }
 
+
     @Override
     public String toString() {
         return name+"{"+
-                "\n key(id)= " + id +
+                "\n id = " + id +
+                "\n coordinates= " + coordinates +
+                "\n creationDate= " + creationDate +
+                "\n health= " + health +
+                "\n heartCount= "+heartCount+
+                "\n "+ chapter+
+                "\n weaponType= " + weaponType +
+                "\n meeleweapon= " + meleeWeapon +
+                "\n}\n----------------------------------";
+    }
+
+    public String toString(String key) {
+        return name+"{"+
+                "\n key= " + key +
+                "\n id = " + id +
                 "\n coordinates= " + coordinates +
                 "\n creationDate= " + creationDate +
                 "\n health= " + health +

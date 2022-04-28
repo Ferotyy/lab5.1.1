@@ -87,19 +87,25 @@ public class Shell {
      */
     public void prepareSMCollection(String filename) throws ParsingError {
         while (true) {
-            if(filename != null && !filename.isEmpty()){
-                try {
-                    File file = new File(filename);
-                    if (!file.exists()) throw new FileNotExistsException();
-                    if(!file.canRead()) throw new FileWrongPermissionsException("cannot read file");
-                    smCollection = new SMCollection();
-                    smCollection.loadFromXML(filename);
-                    break;
-                }catch ( FileWrongPermissionsException | FileNotExistsException ignored){
+            if (filename != null && !filename.isEmpty()) {
+                String path = System.getenv(filename);
+                String[] checkPath = path.split(";");
+                if (checkPath.length == 1) {
+
+                    try {
+                        File file = new File(path);
+                        if (!file.exists()) throw new FileNotExistsException();
+                        if (!file.canRead()) throw new FileWrongPermissionsException("cannot read file");
+                        smCollection = new SMCollection();
+                        smCollection.loadFromXML(path);
+                        break;
+                    } catch (Exception ignored) {
+                    }
                 }
             }
-            System.out.println(Message.getMessage("incorrectFileName"));
-            filename = getUserInput();
+                System.out.println(Message.getMessage("incorrectFileName"));
+                filename = getUserInput();
+
         }
     }
     /**
@@ -156,6 +162,12 @@ public class Shell {
             return "";
         }
     }
+
+    /**
+     * Проверяет, являются ли введенные данные командой, и если является то запускает программу
+     * @param cmd введенное значение
+     * @return
+     */
     private boolean executeCommand(String cmd) {
         if (isShellActive) {
             for (Command command : availableCommands) {
