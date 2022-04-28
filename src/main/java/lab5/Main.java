@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main {
   public static void main(String[] args) throws ParsingError {
       Scanner scanner = new Scanner(System.in);
-      System.out.println("Введите локальную переменную \n >>>");
+      System.out.println("Введите переменную окружения \n >>>");
       String defaultFilePath = scanner.nextLine();
       Shell shell = new Shell(defaultFilePath);
       System.out.println("--------Добро пожаловать--------");
